@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>xServer-1 routing demo</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+    <meta name='apple-mobile-web-app-capable' content='yes' />
+    <meta name='mobile-web-app-capable' content='yes'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.1.0/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.5/dist/leaflet-routing-machine.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-contextmenu@1.4.0/dist/leaflet.contextmenu.min.css">
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        html,
+        body,
+        #map-container,
+        #map {
+            width: 100%;
+            height: 100%;
+            font: 10pt "Helvetica Neue", Arial, Helvetica, sans-serif;
+        }
+
+        .leaflet-top-pane {
+            pointer-events: none;
+        }
+
+        div.inputForm {
+            display: table;
+        }
+
+        div.inputForm p {
+            display: table-row;
+        }
+
+        div.inputForm label {
+            display: table-cell;
+        }
+
+        div.inputForm select {
+            margin: 4px;
+            display: table-cell;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="map" />
+
+    <script src="https://unpkg.com/jquery@3.2.1/dist/jquery.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.1.0/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-xserver@1.0.4/dist/leaflet-xserver.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine@3.2.5/dist/leaflet-routing-machine.min.js"></script>
+    <script src="https://unpkg.com/leaflet-control-geocoder@1.5.5/dist/Control.Geocoder.js"></script>
+    <script src="https://unpkg.com/leaflet-contextmenu@1.4.0/dist/leaflet.contextmenu.min.js"></script>
+    <script src="https://unpkg.com/leaflet.icon.glyph@0.2.0/Leaflet.Icon.Glyph.js"></script>
+
+    <script src="./Control.Geocoder-xs1.js"></script>
+    <script src="./routing-machine-xs1.js"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>

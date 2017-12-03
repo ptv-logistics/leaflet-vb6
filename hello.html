@@ -1,0 +1,27 @@
+<html>
+
+<body>
+	<button onclick='alert(invokeExternal("Say", "Hello VB6"));'>Say Hello to VB6</button>
+	<script>
+	    // invoked by external
+		function Say(text) {
+			alert(text);
+			return 'Said "' + text + '"';
+		}
+
+		// invoke external method
+		function invokeExternal(event, param) {
+			// add param in 'ExtData' field
+			document.body.setAttribute('ExtData', param);
+			// triggers StatusTextChange
+			window.status = event;
+			// unset immediately afterwards
+			window.status = '';
+			// return the result from 'ExtData'
+			return document.body.getAttribute('ExtData');
+		} 
+	</script>
+
+</body>
+
+</html>
