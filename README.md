@@ -15,7 +15,7 @@ Windows desktop applications can embed modern web widgets with the Windows WebBr
 
 Other IDEs can use the WebBrowser OCX directly, but they need to support ```IDocHostUIHandler``` COM internafce on the host window to allow tow-way communication, [which is not easy to implement by your own](https://stackoverflow.com/questions/15160567/provide-a-vb6-object-for-window-external-in-a-webbrowser-hosted-page).
 
-However, you can achieve the same result with some simple tricks.
+However, you can achieve the same result with some simple tricks:
 
 * A VB helper method [InvokeJs](https://github.com/oliverheilig/leaflet-vb6/blob/master/Hello.frm#L82-L86) invokes a script on the WebBrowser document and uses the document attribute ```ExtData``` to pass input and output parameters.
 * For JavaScript an [invokeExternal](https://github.com/oliverheilig/leaflet-vb6/blob/master/hello.html#L13-L22) helper method sets the ```window.status``` of the browser to a method name, after setting a document attribute ```ExtData``` for the method args.
