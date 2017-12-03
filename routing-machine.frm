@@ -62,7 +62,7 @@ Begin VB.Form Form1
       NoFolders       =   0   'False
       Transparent     =   0   'False
       ViewID          =   "{0057D0E0-3573-11CF-AE69-08002B2E1262}"
-      Location        =   "http:///"
+      Location        =   ""
    End
    Begin VB.Label Label4 
       Caption         =   "- min"
@@ -104,7 +104,7 @@ Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Private Sub Form_Load()
     ' You need an xServer-internet token to run this sample.
-    xtok = "5D213BA1-B65E-4D10-9DB8-37FDD30D1399"
+    xtok = ""
     If (xtok = "") Then
         MsgBox "You need an xServer-internet token to run this sample!"
     End If
