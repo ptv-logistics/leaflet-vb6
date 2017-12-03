@@ -1,6 +1,8 @@
 # leaflet-vb6
 Embed leaflet-based maps within vintage desktop applications.
 
+![screenshot](https://cdn.rawgit.com/oliverheilig/leaflet-vb6/baed5a65/screenshot.png)
+
 ## Purpose
 This sample shows how vintage desktop applications can embed modern browser-based controls. The sample **routing-machine** implements a simple route-planner in VB6. It utilizes [this JavaScript sample](https://github.com/ptv-logistics/xserverjs/tree/master/premium-samples/lrm-xserver/xserver-1) to be controlled from within the VB6 code.
 
