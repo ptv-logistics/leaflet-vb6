@@ -1,10 +1,10 @@
 # leaflet-vb6
-Embed leaflet-based maps within vintage desktop applications.
+Embed leaflet-based maps within classic desktop applications.
 
 ![screenshot](https://cdn.rawgit.com/oliverheilig/leaflet-vb6/baed5a65/screenshot.png)
 
 ## Purpose
-This sample shows how vintage desktop applications can embed modern browser-based controls. The sample **routing-machine** implements a simple route-planner in VB6. It utilizes [this JavaScript sample](https://github.com/ptv-logistics/xserverjs/tree/master/premium-samples/lrm-xserver/xserver-1) to be controlled from within the VB6 code.
+This sample shows how classic desktop applications can embed modern browser-based controls. The sample **routing-machine** implements a simple route-planner in VB6. It utilizes [this JavaScript sample](https://github.com/ptv-logistics/xserverjs/tree/master/premium-samples/lrm-xserver/xserver-1) to be controlled from within the VB6 code.
 
 * To run the sample just start **routing-machine.exe**. Maybe you need to install the [VB6 run-time files](https://support.microsoft.com/en-us/help/192461/vbrun60-exe-installs-visual-basic-6-0-run-time-files) first.
 * To build / debug this code you need a [PTV xServer-internet token](https://xserver.ptvgroup.com/en-uk/products/ptv-xserver-internet/test/) and of course some version of VB6. 
@@ -19,6 +19,6 @@ However, you can achieve the same result with some simple tricks:
 
 * A VB helper method [InvokeJs](https://github.com/oliverheilig/leaflet-vb6/blob/master/Hello.frm#L82-L86) invokes a script on the WebBrowser document and uses the document attribute ```ExtData``` to pass input and output parameters.
 * For JavaScript an [invokeExternal](https://github.com/oliverheilig/leaflet-vb6/blob/master/hello.html#L13-L22) helper method sets the ```window.status``` of the browser to a method name, after setting a document attribute ```ExtData``` for the method args.
-* On the VB6 side, the [StatusTextChange](https://github.com/oliverheilig/leaflet-vb6/blob/master/Hello.frm#L69-L79)  event can be used as method dispatcher with ```ExtData``` for input and outpout args. 
+* On the VB6 side, the [StatusTextChange](https://github.com/oliverheilig/leaflet-vb6/blob/master/Hello.frm#L69-L79)  event can be used as method dispatcher with ```ExtData``` for input and output args. 
 
 This method doesn't support true object arguments like the .NET control. You have to work with string separators, or you can work with JSON if you have a parser for your framework. I would favor string/JSON commuications anyway, as it increases the reusability of the code in maybe future web applications.
