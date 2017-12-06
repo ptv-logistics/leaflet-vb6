@@ -42,7 +42,7 @@ Begin VB.Form Form1
       NoFolders       =   0   'False
       Transparent     =   0   'False
       ViewID          =   "{0057D0E0-3573-11CF-AE69-08002B2E1262}"
-      Location        =   "http:///"
+      Location        =   ""
    End
 End
 Attribute VB_Name = "Form1"
@@ -51,7 +51,6 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Private Sub Form_Load()
-' WebBrowser1.Navigate "C:/dev/xserverjsmaster/premium-samples/lrm-xserver/xserver-1/index.html"
     WebBrowser1.Navigate (App.Path + "/hello.html")
 End Sub
 

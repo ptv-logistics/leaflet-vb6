@@ -124,9 +124,8 @@ End Sub
 
 ' set routing params and calculate the route
 Private Sub Command1_Click()
-    InvokeJs "setPlan('" + Replace(Text1.Text, vbCrLf, vbNullString) + "')"
     InvokeJs "setProfile('" + Combo1.Text + "')"
-    InvokeJs "route()"
+    InvokeJs "setWaypoints('" + Replace(Text1.Text, vbCrLf, vbNullString) + "')"
 End Sub
     
 ' display result summary

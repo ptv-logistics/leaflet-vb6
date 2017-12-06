@@ -5,7 +5,7 @@ var routingProfile = 'carfast';
 var alternativeRoutes = 0;
 var routingControl;
 
-// initialize the map 
+// initialize the map f
 var map = L.map('map', {
 	contextmenu: true,
 	contextmenuWidth: 200,
@@ -71,15 +71,9 @@ function setProfile(profile) {
 	routingProfile = profile;
 }
 
-function setPlan(thePlan) {
-	plan = JSON.parse(thePlan);	
-}
-
-function route()
+function setWaypoints(plan)
 {
-	routingControl.setWaypoints(plan);
-	routingControl._router.options.numberOfAlternatives = alternativeRoutes;
-	routingControl.route();
+	routingControl.setWaypoints(JSON.parse(plan));
 }
 
 L.control.scale().addTo(map);
