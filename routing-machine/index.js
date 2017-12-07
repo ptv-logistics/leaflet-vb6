@@ -31,7 +31,7 @@ var map = L.map('map', {
 }).setView([50, 10], 4);
 
 // returns a layer group for xmap back- and foreground layers
-function getXMapBaseLayers(style, token, labelPane) {
+function getXMapBaseLayers(style, token) {
 	var attribution = '<a target="_blank" href="http://www.ptvgroup.com">PTV</a>, HERE';
 
 	var background = L.tileLayer('https://api{s}-test.cloud.ptvgroup.com/WMS/GetTile/xmap-' + style + 'bg/{x}/{y}/{z}.png', {
@@ -61,10 +61,10 @@ map.getPane('labels').style.zIndex = 500;
 map.getPane('labels').style.pointerEvents = 'none';
 
 var baseLayers = {
-	'PTV classic': getXMapBaseLayers('ajax', token, map._panes.labelPane),
-	'PTV gravelpit': getXMapBaseLayers('gravelpit-', token, map._panes.labelPane),
-	'PTV silkysand': getXMapBaseLayers('silkysand-', token, map._panes.labelPane).addTo(map),
-	'PTV sandbox': getXMapBaseLayers('sandbox-', token, map._panes.labelPane)
+	'PTV classic': getXMapBaseLayers('ajax', token),
+	'PTV gravelpit': getXMapBaseLayers('gravelpit-', token),
+	'PTV silkysand': getXMapBaseLayers('silkysand-', token).addTo(map),
+	'PTV sandbox': getXMapBaseLayers('sandbox-', token)
 };
 
 function setProfile(profile) {
@@ -162,7 +162,7 @@ routingControl = L.Routing.control({
 }).addTo(map);
 
 routingControl.on('routesfound', function(rr) {
-	invokeExternal('onRoutesFound', rr.routes[0].summary.totalDistance + '|' + rr.routes[0].summary.totalTime);
+	invokeExternal('onRoutesFound', JSON.stringify(rr.routes[0].summary));
 });
 
 routingControl.on('routingerror', function (e) {

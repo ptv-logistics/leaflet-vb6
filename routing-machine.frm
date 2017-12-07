@@ -130,9 +130,9 @@ End Sub
     
 ' display result summary
 Private Sub OnRoutesFound(strResult As String)
-    vals = Split(strResult, "|")
-    Label2.Caption = CStr(vals(0) / 1000) + " km"
-    Label4.Caption = CStr(Round(vals(1) / 60)) + " min"
+    Set s = JSON.parse(strResult)
+    Label2.Caption = CStr(s.Item("totalDistance") / 1000) + " km"
+    Label4.Caption = CStr(Round(s.Item("totalTime") / 60)) + " min"
 End Sub
 
 ' event-handling
