@@ -50,7 +50,8 @@ function getXMapBaseLayers(style, token) {
 		format: 'image/png',
 		transparent: true,
 		attribution: attribution,
-		pane: 'labels'
+		pane: 'labels',
+		useCanvas: false // don't use the canvas implementation (it's IE anyways)
 	});
 
 	return L.layerGroup([background, foreground]);
