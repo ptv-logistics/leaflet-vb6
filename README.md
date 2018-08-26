@@ -21,4 +21,4 @@ However, you can achieve the same result with some simple tricks:
 * For JavaScript an [invokeExternal](https://github.com/oliverheilig/leaflet-vb6/blob/master/hello.html#L13-L22) helper method sets the ```window.status``` of the browser to a method name, after setting a document attribute ```ExtData``` for the method args.
 * On the VB6 side, the [StatusTextChange](https://github.com/oliverheilig/leaflet-vb6/blob/master/Hello.frm#L68-L78)  event can be used as method dispatcher with ```ExtData``` for input and output args. 
 
-This method doesn't support true object arguments like the .NET control. You have to work with string separators, or you can work with JSON if you have a parser for your framework. I would favor string/JSON commuications anyway, as it increases the reusability of the code in maybe future web applications.
+This method doesn't support true object arguments like the .NET control. However with VBJSON object data can be exchanged between VB and JavaScript.
