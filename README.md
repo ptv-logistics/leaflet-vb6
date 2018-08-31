@@ -13,7 +13,7 @@ This sample shows how classic desktop applications can embed modern browser-base
 Windows desktop applications can embed modern web widgets with the Windows WebBrowser Control.
 .NET comes with the ```System.Windows.Forms.WebBrowser``` class, which makes it very easy to communicate with the JavaScript page by using ```InvokeScript()``` and ```window.external()```. 
 
-Other IDEs can use the WebBrowser OCX directly, but they need to support ```IDocHostUIHandler``` COM internafce on the host window to allow tow-way communication, [which is not easy to implement by your own](https://stackoverflow.com/questions/15160567/provide-a-vb6-object-for-window-external-in-a-webbrowser-hosted-page).
+Other IDEs can use the WebBrowser OCX directly, but they need to support ```IDocHostUIHandler``` COM interface on the host window to allow two-way communication, [which is not easy to implement by your own](https://stackoverflow.com/questions/15160567/provide-a-vb6-object-for-window-external-in-a-webbrowser-hosted-page).
 
 However, you can achieve the same result with some simple tricks:
 
