@@ -13,7 +13,7 @@ This sample shows how classic desktop applications can embed modern browser-base
 Windows desktop applications can embed modern web widgets with the Windows WebBrowser Control.
 .NET comes with the ```System.Windows.Forms.WebBrowser``` class, which makes it very easy to communicate with the JavaScript page by using ```InvokeScript()``` and ```window.external()```. 
 
-Other IDEs can use the WebBrowser OCX directly, but they need to support ```IDocHostUIHandler``` COM internafce on the host window to allow tow-way communication, [which is not easy to implement by your own](https://stackoverflow.com/questions/15160567/provide-a-vb6-object-for-window-external-in-a-webbrowser-hosted-page).
+Other IDEs can use the WebBrowser OCX directly, but they need to support ```IDocHostUIHandler``` COM interface on the host window to allow two-way communication, [which is not easy to implement by your own](https://stackoverflow.com/questions/15160567/provide-a-vb6-object-for-window-external-in-a-webbrowser-hosted-page).
 
 However, you can achieve the same result with some simple tricks:
 
@@ -21,4 +21,4 @@ However, you can achieve the same result with some simple tricks:
 * For JavaScript an [invokeExternal](https://github.com/oliverheilig/leaflet-vb6/blob/master/hello.html#L13-L22) helper method sets the ```window.status``` of the browser to a method name, after setting a document attribute ```ExtData``` for the method args.
 * On the VB6 side, the [StatusTextChange](https://github.com/oliverheilig/leaflet-vb6/blob/master/Hello.frm#L68-L78)  event can be used as method dispatcher with ```ExtData``` for input and output args. 
 
-This method doesn't support true object arguments like the .NET control. You have to work with string separators, or you can work with JSON if you have a parser for your framework. I would favor string/JSON commuications anyway, as it increases the reusability of the code in maybe future web applications.
+This method doesn't support true object arguments like the .NET control. However with VBJSON object data can be exchanged between VB and JavaScript.
